@@ -2,7 +2,7 @@
 
 An opinion for data-fetching in MobX.
 
-Try it here: [codesandbox.io](https://codesandbox.io/s/infallible-browser-bs151p)
+Try it here: [codesandbox.io](https://codesandbox.io/s/confident-breeze-xp2plo)
 
 ## Background
 
