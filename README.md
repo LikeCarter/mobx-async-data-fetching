@@ -4,7 +4,7 @@ An opinion for data-fetching in MobX.
 
 Try it here: [codesandbox.io](https://codesandbox.io/s/infallible-browser-bs151p)
 
-# Hooks and managing global state
+## Background
 
 This uses [react-promise-suspense](https://github.com/vigzmv/react-promise-suspense) with inspiration from [use-asset](https://github.com/pmndrs/use-asset).
 
@@ -24,7 +24,7 @@ Other common approaches include:
   * Will not respond to updates to the MobX store from other components.
   * Multiple places where data is stored.
 
-# Example
+## Sample
 
 ```jsx
 import usePromise from "react-promise-suspense";
