@@ -1,6 +1,8 @@
-# Dealing with async data fetching and MobX
+# MobX asynchronous data-fetching
 
-This repository includes an example for my preferred way of data-fetching in MobX.
+An opinion for data-fetching in MobX.
+
+Try it here: [codesandbox.io](https://codesandbox.io/s/infallible-browser-bs151p)
 
 # Hooks and managing global state
 
@@ -8,12 +10,12 @@ This uses [react-promise-suspense](https://github.com/vigzmv/react-promise-suspe
 
 Benefits of this approach:
 
-* Much less boilerplate
-* Suspense to handle loading states
-* MobX as a first class-citizen
-  * Data centralized in one place
-  * Easily cache results
-  * Easily perform optimistic updates
+* Less boilerplate.
+* Suspense to handle loading states.
+* MobX as a first class-citizen.
+  * Data centralized.
+  * Cache results.
+  * Cperform optimistic updates.
 
 Other common approaches include:
 * Performing data-fetching within a `useEffect`, drawbacks:
@@ -52,8 +54,5 @@ const PostTitle = observer(({ id }) => {
 function App() {
   <Suspense fallback={<div>loading...</div>}>
     <PostTitle id={1000} />
+    ...
 ```
-
-# Codesandbox
-
-<!-- [codesandbox](https://codesandbox.io/s/use-asset-demo-forked-ji8ky) -->
