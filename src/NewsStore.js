@@ -1,14 +1,10 @@
 import { makeAutoObservable } from "mobx";
 
 class NewsStore {
-  article = {};
+  articles = new Map();
 
   constructor() {
     makeAutoObservable(this);
-  }
-
-  setArticle = (article) => {
-    this.article = article
   }
 
   load = async (id) => {
@@ -16,8 +12,8 @@ class NewsStore {
       `https://hacker-news.firebaseio.com/v0/item/${id}.json`
     );
     const data = await response.json();
-    this.setArticle(data)
-  }
+    this.articles.set(id, data);
+  };
 }
 
 export const newsStore = new NewsStore();

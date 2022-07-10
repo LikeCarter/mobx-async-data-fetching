@@ -18,7 +18,7 @@ const PostTitle = observer(({ id }) => {
 
   // We reference the mobx store directly to get the post data.
   // This lets us observe state changes made outside the component.
-  const { by, title, url, text, time } = newsStore.article;
+  const { by, title, url, text, time } = newsStore.articles.get(id);
 
   // By the time we're here the entry is present(!), no checking for loading states,
   // and no error handling at the component level (catch them in ErrorBoundaries).
@@ -45,10 +45,10 @@ export default function App() {
         </Suspense>
       </div>
       <div className="nav">
-        <button onClick={() => set(id + 1)}>
+        <button onClick={() => set(prev => prev + 1)}>
           <div>→</div>
         </button>
-        <button onClick={() => set(id - 1)}>
+        <button onClick={() => set(prev => prev - 1)}>
           <div>←</div>
         </button>
       </div>
