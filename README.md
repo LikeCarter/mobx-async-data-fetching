@@ -14,8 +14,9 @@ Benefits of this approach:
 * Suspense to handle loading states.
 * MobX as a first class-citizen.
   * Data centralized.
-  * Cache results.
-  * Cperform optimistic updates.
+  * Extensible:
+    * Cache results.
+    * Perform optimistic updates.
 
 Other common approaches include:
 * Performing data-fetching within a `useEffect`, drawbacks:
